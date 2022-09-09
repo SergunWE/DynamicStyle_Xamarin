@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage"
+             Style="{DynamicResource pageThemeBackgroundStyle}">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="LightBlue" Padding="{DynamicResource basePadding}" CornerRadius="0">
+                <Label Text="Текст заголовка со стилем" Style="{DynamicResource headerLabelStyle}"/>
+            </Frame>
+            <StackLayout Padding="{DynamicResource basePadding}">
+                <Label Text="Заголовок текста со стилем" Style="{DynamicResource titleLabelStyle}"/>
+                <Label Text="Обычный текст с динамическим стилем, обычный текст с динамическим стилем.Обычный текст с динамическим стилем!"
+                Style="{DynamicResource simpleLabelStyle}"/>
+                <Label Style="{DynamicResource simpleLabelStyle}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Текст на новом абзаце "/>
+                                <Span Text="https://aka.ms/xamarin-quickstart" Style="{DynamicResource linkLabelStyle}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Style="{DynamicResource simpleLabelStyle}" Text="УВЕЛИЧИТЬ ТЕКСТ" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+
+                <Button Text="Увеличить текст" Clicked="UpText_Clicked"/>
+                <Button Text="Уменьшить текст" Clicked="DownText_Clicked"/>
+                <Button Text="Увеличить отступы" Clicked="UpPadding_Clicked"/>
+                <Button Text="Уменьшить отступы" Clicked="DownPadding_Clicked"/>
+                <Button Text="Сменить тему" Clicked="ThemeChange_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
