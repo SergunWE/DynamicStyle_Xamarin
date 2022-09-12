@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Resources.DynamicStyle">
+             x:Class="App1.Resources.BaseStyle">
     <!--bases styles-->
     <Style x:Key="baseLabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource lightTextColor}, Dark={StaticResource darkTextColor}}"/>
-        <Setter Property="FontSize" Value="{x:StaticResource simpleFontSize}"/>
+       
+        <Setter Property="FontSize" Value="{DynamicResource simpleFontSize}"/>
     </Style>
     <Style x:Key="baseButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="{DynamicResource simpleFontSize}"/>
@@ -21,27 +21,25 @@
     </Style>
 
     <!--currents styles-->
-    <Style x:Key="simpleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
+    <Style x:Key="simpleLabelStyle" TargetType="Label" BaseResourceKey="baseLabelStyle">
         <Setter Property="FontSize" Value="{DynamicResource simpleFontSize}"/>
     </Style>
-    <Style x:Key="titleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
+    <Style x:Key="titleLabelStyle" TargetType="Label" BaseResourceKey="baseLabelStyle">
         <Setter Property="FontSize" Value="{DynamicResource titleFontSize}"/>
         <Setter Property="FontAttributes" Value="Bold"/>
     </Style>
-    <Style x:Key="headerLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
+    <Style x:Key="headerLabelStyle" TargetType="Label" BaseResourceKey="baseLabelStyle">
         <Setter Property="FontSize" Value="{DynamicResource headerFontSize}"/>
         <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
         <Setter Property="HorizontalTextAlignment" Value="Center"/>
     </Style>
-    <Style x:Key="linkLabelStyle" TargetType="Label" BasedOn="{StaticResource simpleLabelStyle}">
+    <Style x:Key="linkLabelStyle" TargetType="Label" BaseResourceKey="baseLabelStyle">
         <Setter Property="TextColor" Value="{DynamicResource linkTextColor}"/>
         <Setter Property="TextDecorations" Value="Underline"/>
     </Style>
-    <Style x:Key="pageThemeBackgroundStyle" TargetType="Page">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightBackgroundColor}, Dark={StaticResource darkBackgroundColor}}"/>
-    </Style>
+    
     <Style x:Key="titleStyle" TargetType="Frame">
-        <Setter Property="BackgroundColor" Value="{StaticResource titleBackgroundColor}"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource titleBackgroundColor}"/>
         <Setter Property="Padding" Value="{DynamicResource basePadding}"/>
         <Setter Property="CornerRadius" Value="0"/>
     </Style>

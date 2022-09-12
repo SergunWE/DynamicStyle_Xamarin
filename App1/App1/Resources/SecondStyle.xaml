@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Resources.SecondStyle">
+    <Color x:Key="darkTextColor">Gray</Color>
+    <Color x:Key="darkBackgroundColor">Black</Color>
+    <Color x:Key="lightTextColor">Black</Color>
+    <Color x:Key="lightBackgroundColor">Gray</Color>
+    
+    <Color x:Key="linkTextColor">Red</Color>
+    <Color x:Key="buttonBorderColor">Green</Color>
+    <Color x:Key="titleBackgroundColor">Orange</Color>
+
+    <x:Double x:Key="buttonHeight">45</x:Double>
+    <x:Double x:Key="stackSpacing">9</x:Double>
+    <x:Double x:Key="buttonBorderWidth">2</x:Double>
+
+    <Thickness x:Key="basePadding">40,15</Thickness>
+    <Thickness x:Key="sidePadding">40,0</Thickness>
+
+    <x:Double x:Key="simpleFontSize">20</x:Double>
+    <x:Double x:Key="titleFontSize">29</x:Double>
+    <x:Double x:Key="headerFontSize">39</x:Double>
+
+    <Style x:Key="baseLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource lightTextColor}, Dark={StaticResource darkTextColor}}"/>
+    </Style>
+    <Style x:Key="simpleLabelStyle" TargetType="Label" BasedOn="{StaticResource simpleLabelStyle}">
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="titleLabelStyle" TargetType="Label" BasedOn="{StaticResource titleLabelStyle}">
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="pageThemeBackgroundStyle" TargetType="Page">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightBackgroundColor}, Dark={StaticResource darkBackgroundColor}}"/>
+    </Style>
+</ResourceDictionary>

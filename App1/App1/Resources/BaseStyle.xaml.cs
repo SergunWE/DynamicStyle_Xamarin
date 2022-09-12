@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace App1.Resources
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FontValues : ResourceDictionary
+    public partial class BaseStyle : ResourceDictionary
     {
-        public FontValues()
+        public BaseStyle()
         {
             InitializeComponent();
         }

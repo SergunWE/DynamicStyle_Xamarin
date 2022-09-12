@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace App1.Resources
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DoubleValues : ResourceDictionary
+    public partial class FirstStyle : ResourceDictionary
     {
-        public DoubleValues()
+        public FirstStyle()
         {
             InitializeComponent();
         }

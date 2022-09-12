@@ -16,23 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\ThicknessValues.xaml.cs">
-      <DependentUpon>ThicknessValues.xaml</DependentUpon>
+    <Compile Update="Resources\SecondStyle.xaml.cs">
+      <DependentUpon>SecondStyle.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resources\DynamicStyle.xaml.cs">
-      <DependentUpon>DynamicStyle.xaml</DependentUpon>
+    <Compile Update="Resources\FirstStyle.xaml.cs">
+      <DependentUpon>FirstStyle.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resources\DoubleValues.xaml.cs">
-      <DependentUpon>DoubleValues.xaml</DependentUpon>
+    <Compile Update="Resources\BaseStyle.xaml.cs">
+      <DependentUpon>BaseStyle.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resources\ColorValues.xaml.cs">
-      <DependentUpon>ColorValues.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\FontValues.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

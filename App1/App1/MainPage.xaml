@@ -22,15 +22,11 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Style="{DynamicResource simpleLabelStyle}" Text="УВЕЛИЧИТЬ ТЕКСТ" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-                <StackLayout Style="{DynamicResource baseStackStyle}">
-                    <Button Text="Увеличить текст" Clicked="UpText_Clicked" Style="{DynamicResource baseButtonStyle}"/>
-                    <Button Text="Уменьшить текст" Clicked="DownText_Clicked" Style="{DynamicResource baseButtonStyle}"/>
-                    <Button Text="Увеличить отступы" Clicked="UpPadding_Clicked" Style="{DynamicResource baseButtonStyle}"/>
-                    <Button Text="Уменьшить отступы" Clicked="DownPadding_Clicked" Style="{DynamicResource baseButtonStyle}"/>
-                    <Button Text="Сменить тему" Clicked="ThemeChange_Clicked" Style="{DynamicResource baseButtonStyle}"/>
-                </StackLayout>
-                <Button Text="Посмотреть значения стиля" Clicked="NextPage_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                <Button Text="Сменить тему" Clicked="ThemeChange_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                <Button Text="Сменить стиль" Clicked="StyleChange_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                <Label Text="{Binding HeaderSize, StringFormat='Размер шрифта гл. заг. - {0}'}" Style="{DynamicResource headerLabelStyle}"/>
+                <Label Text="{Binding TitleSize, StringFormat='Размер шрифта заг. - {0}'}" Style="{DynamicResource titleLabelStyle}"/>
+                <Label Text="{Binding SimpleSize, StringFormat='Размер шрифта текста - {0}'}" Style="{DynamicResource simpleLabelStyle}"/>
             </StackLayout>
         </StackLayout>
     </ScrollView>

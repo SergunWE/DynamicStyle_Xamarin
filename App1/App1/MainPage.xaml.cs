@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App1.Helpers;
+using App1.Resources;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,29 +12,21 @@ namespace App1
 {
     public partial class MainPage : ContentPage
     {
+        public double HeaderSize { get; set; }
+        public double TitleSize { get; set; }
+        public double SimpleSize { get; set; }
+
+        private bool _firstStyle = true;
+
+        private double width = 1080;
+        private double density = 2.75;
+
         public MainPage()
         {
+            DynamicStyleHelper.CalculateAndSetValues(width, density, new FirstStyle());
+            SetSizeLabels();
             InitializeComponent();
-        }
-
-        private void UpText_Clicked(object sender, EventArgs e)
-        {
-            DynamicStyleHelper.ChangeFontSize(1);
-        }
-
-        private void DownText_Clicked(object sender, EventArgs e)
-        {
-            DynamicStyleHelper.ChangeFontSize(-1);
-        }
-
-        private void UpPadding_Clicked(object sender, EventArgs e)
-        {
-            DynamicStyleHelper.ChangeThickness(1);
-        }
-
-        private void DownPadding_Clicked(object sender, EventArgs e)
-        {
-            DynamicStyleHelper.ChangeThickness(-1);
+            BindingContext = this;
         }
 
         private void ThemeChange_Clicked(object sender, EventArgs e)
@@ -48,9 +42,29 @@ namespace App1
             }
         }
 
-        private void NextPage_Clicked(object sender, EventArgs e)
+        private void StyleChange_Clicked(object sender, EventArgs e)
         {
+            if(_firstStyle)
+            {
+                _firstStyle = false;
+                DynamicStyleHelper.CalculateAndSetValues(width, density, new SecondStyle(), true);
+            }
+            else
+            {
+                _firstStyle = true;
+                DynamicStyleHelper.CalculateAndSetValues(width, density, new FirstStyle(), true);
+            }
+            SetSizeLabels();
+        }
 
+        private void SetSizeLabels()
+        {
+            HeaderSize = (double)ResourceHelper.GetResource("headerFontSize");
+            TitleSize = (double)ResourceHelper.GetResource("titleFontSize");
+            SimpleSize = (double)ResourceHelper.GetResource("simpleFontSize");
+            OnPropertyChanged("HeaderSize");
+            OnPropertyChanged("TitleSize");
+            OnPropertyChanged("SimpleSize");
         }
     }
 }
