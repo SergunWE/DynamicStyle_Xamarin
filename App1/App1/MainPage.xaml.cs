@@ -24,7 +24,6 @@ namespace App1
         public MainPage()
         {
             DynamicStyleHelper.CalculateAndSetValues(width, density, new FirstStyle());
-            SetSizeLabels();
             InitializeComponent();
             BindingContext = this;
         }
@@ -47,12 +46,12 @@ namespace App1
             if(_firstStyle)
             {
                 _firstStyle = false;
-                DynamicStyleHelper.CalculateAndSetValues(width, density, new SecondStyle(), true);
+                DynamicStyleHelper.CalculateAndSetValues(width, density, new SecondStyle());
             }
             else
             {
                 _firstStyle = true;
-                DynamicStyleHelper.CalculateAndSetValues(width, density, new FirstStyle(), true);
+                DynamicStyleHelper.CalculateAndSetValues(width, density, new FirstStyle());
             }
             SetSizeLabels();
         }

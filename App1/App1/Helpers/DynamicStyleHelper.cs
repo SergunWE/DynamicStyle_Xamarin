@@ -22,12 +22,8 @@ namespace App1.Helpers
             _baseStyle = new BaseStyle();
         }
 
-        public static void CalculateAndSetValues(double width, double density, ResourceDictionary resources, bool needReset = false)
+        public static void CalculateAndSetValues(double width, double density, ResourceDictionary resources)
         {
-            if (needReset)
-            {
-                ResetStyle();
-            }
             SetResources(CalculateDynamicValues(width, density, resources));
         }
 
@@ -88,12 +84,6 @@ namespace App1.Helpers
             thickness.Top = thickness.Top * _displayCoef;
             thickness.Bottom = thickness.Bottom * _displayCoef;
             _resources[resourceName] = thickness;
-        }
-
-        private static void ResetStyle()
-        {
-            //Application.Current.Resources.Clear();
-            //Application.Current.Resources = _baseStyle;
         }
     }
 }
