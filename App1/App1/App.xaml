@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.App"
->
+             x:Class="App1.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,68 +12,5 @@
                 <ResourceDictionary Source="Resources/DynamicStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
-
-        <!--values-->
-        <!--<x:Double x:Key="simpleFontSize">14</x:Double>
-        <x:Double x:Key="titleFontSize">25</x:Double>
-        <x:Double x:Key="headerFontSize">35</x:Double>
-
-        <x:Double x:Key="buttonHeight">50</x:Double>
-        <x:Double x:Key="stackSpacing">6</x:Double>
-        <x:Double x:Key="buttonBorderWidth">1</x:Double>
-        
-        <Color x:Key="darkTextColor">White</Color>
-        <Color x:Key="darkBackgroundColor">Black</Color>
-        <Color x:Key="lightTextColor">Black</Color>
-        <Color x:Key="lightBackgroundColor">White</Color>
-        <Color x:Key="linkTextColor">#0000fe</Color>
-        <Color x:Key="buttonBorderColor">Yellow</Color>-->
-
-        <!--changes for type-->
-        <!--<Style TargetType="Label">
-            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource lightTextColor}, Dark={StaticResource darkTextColor}}"/>
-            <Setter Property="FontSize" Value="{x:StaticResource simpleFontSize}"/>
-        </Style>
-        <Style x:Key="pageThemeBackgroundStyle" TargetType="Page">
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightBackgroundColor}, Dark={StaticResource darkBackgroundColor}}"/>
-        </Style>
-        <Style TargetType="Button">
-            <Setter Property="FontSize" Value="{DynamicResource simpleFontSize}"/>
-            <Setter Property="FontAttributes" Value="None"/>
-            <Setter Property="BorderWidth" Value="{DynamicResource buttonBorderWidth}"/>
-            <Setter Property="BorderColor" Value="{DynamicResource buttonBorderColor}"/>
-            <Setter Property="HeightRequest" Value="{DynamicResource buttonHeight}"/>
-            <Setter Property="Margin" Value="0"/>
-            <Setter Property="Padding" Value="0"/>
-        </Style>
-        <Style TargetType="StackLayout">
-            <Setter Property="Spacing" Value="{DynamicResource stackSpacing}"/>
-        </Style>
-
-        --><!--bases styles--><!--
-        <Style x:Key="baseLabelStyle" TargetType="Label"/>
-
-        --><!--currents styles--><!--
-        <Style x:Key="simpleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
-            <Setter Property="FontSize" Value="{DynamicResource simpleFontSize}"/>
-        </Style>
-        <Style x:Key="titleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
-            <Setter Property="FontSize" Value="{DynamicResource titleFontSize}"/>
-            <Setter Property="FontAttributes" Value="Bold"/>
-        </Style>
-        <Style x:Key="headerLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
-            <Setter Property="FontSize" Value="{DynamicResource headerFontSize}"/>
-            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        </Style>
-        <Style x:Key="linkLabelStyle" TargetType="Label" BasedOn="{StaticResource simpleLabelStyle}">
-            <Setter Property="TextColor" Value="{DynamicResource linkTextColor}"/>
-            <Setter Property="TextDecorations" Value="Underline"/>
-        </Style>
-
-        --><!--style values--><!--
-        <Thickness x:Key="basePadding">30,10</Thickness>
-        <Thickness x:Key="sidePadding">30,0</Thickness>-->
     </Application.Resources>
 </Application>

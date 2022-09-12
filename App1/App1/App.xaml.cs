@@ -9,7 +9,7 @@ namespace App1
         public App()
         {
             InitializeComponent();
-            DynamicStyleHelper.CalculateAll();
+            DynamicStyleHelper.CalculateDynamicValues();
             MainPage = new MainPage();
         }
 

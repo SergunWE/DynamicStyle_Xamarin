@@ -5,10 +5,10 @@
              Style="{DynamicResource pageThemeBackgroundStyle}">
     <ScrollView>
         <StackLayout>
-            <Frame BackgroundColor="LightBlue" Padding="{DynamicResource basePadding}" CornerRadius="0">
+            <Frame Style="{DynamicResource titleStyle}">
                 <Label Text="Текст заголовка со стилем" Style="{DynamicResource headerLabelStyle}"/>
             </Frame>
-            <StackLayout Padding="{DynamicResource basePadding}">
+            <StackLayout Padding="{DynamicResource basePadding}" Style="{DynamicResource baseStackStyle}">
                 <Label Text="Заголовок текста со стилем" Style="{DynamicResource titleLabelStyle}"/>
                 <Label Text="Обычный текст с динамическим стилем, обычный текст с динамическим стилем.Обычный текст с динамическим стилем!"
                 Style="{DynamicResource simpleLabelStyle}"/>
@@ -23,12 +23,14 @@
                     </Label.FormattedText>
                 </Label>
                 <Label Style="{DynamicResource simpleLabelStyle}" Text="УВЕЛИЧИТЬ ТЕКСТ" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
-
-                <Button Text="Увеличить текст" Clicked="UpText_Clicked"/>
-                <Button Text="Уменьшить текст" Clicked="DownText_Clicked"/>
-                <Button Text="Увеличить отступы" Clicked="UpPadding_Clicked"/>
-                <Button Text="Уменьшить отступы" Clicked="DownPadding_Clicked"/>
-                <Button Text="Сменить тему" Clicked="ThemeChange_Clicked"/>
+                <StackLayout Style="{DynamicResource baseStackStyle}">
+                    <Button Text="Увеличить текст" Clicked="UpText_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                    <Button Text="Уменьшить текст" Clicked="DownText_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                    <Button Text="Увеличить отступы" Clicked="UpPadding_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                    <Button Text="Уменьшить отступы" Clicked="DownPadding_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                    <Button Text="Сменить тему" Clicked="ThemeChange_Clicked" Style="{DynamicResource baseButtonStyle}"/>
+                </StackLayout>
+                <Button Text="Посмотреть значения стиля" Clicked="NextPage_Clicked" Style="{DynamicResource baseButtonStyle}"/>
             </StackLayout>
         </StackLayout>
     </ScrollView>

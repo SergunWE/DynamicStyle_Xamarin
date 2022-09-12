@@ -2,7 +2,7 @@
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Resources.DoubleValues">
-    <x:Double x:Key="buttonHeight">50</x:Double>
+    <x:Double x:Key="buttonHeight">40</x:Double>
     <x:Double x:Key="stackSpacing">6</x:Double>
     <x:Double x:Key="buttonBorderWidth">1</x:Double>
 </ResourceDictionary>

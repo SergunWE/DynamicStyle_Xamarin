@@ -14,15 +14,18 @@ namespace App1
         private const double REFERENCE_DENSITY = 2.75;
         private static double _displayCoef = 0;
 
-        private static string[] _fontSizeValues = { "simpleFontSize", "titleFontSize", "headerFontSize" };
-        private static string[] _doubleValues = { "buttonHeight", "stackSpacing", "buttonBorderWidth" };
-        private static string[] _thicknessValues = { "basePadding", "sidePadding" };
+        private static string[] _fontSizeValues;
+        private static string[] _doubleValues;
+        private static string[] _thicknessValues;
 
         static DynamicStyleHelper()
         {
+            _fontSizeValues = new FontValues().Keys.ToArray();
+            _doubleValues = new DoubleValues().Keys.ToArray();
+            _thicknessValues = new ThicknessValues().Keys.ToArray();
         }
 
-        public static void CalculateAll()
+        public static void CalculateDynamicValues()
         {
             CalculateDisplayCoef();
             CalculateDoubleValues();
@@ -35,7 +38,6 @@ namespace App1
             {
                 SetDynamicResource(valueName, (double)Application.Current.Resources[valueName] + offset * _displayCoef);
             }
-
         }
 
         public static void ChangeThickness(double offset)
@@ -53,13 +55,11 @@ namespace App1
 
         private static void CalculateDoubleValues()
         {
-            ResourceDictionary fontRes = new FontValues();
-            foreach (string valueName in fontRes.Keys)
+            foreach (string valueName in _fontSizeValues)
             {
                 CalculateDouble(valueName);
             }
-            ResourceDictionary doubleRes = new DoubleValues();
-            foreach (string valueName in doubleRes.Keys)
+            foreach (string valueName in _doubleValues)
             {
 
                 CalculateDouble(valueName);
@@ -99,7 +99,7 @@ namespace App1
 
         private static void SetDynamicResource<T>(string resourceName, T value)
         {
-            App.Current.Resources[resourceName] = value;
+            Application.Current.Resources[resourceName] = value;
         }
 
         private static object GetResourceValue(string keyName)

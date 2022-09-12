@@ -47,5 +47,10 @@ namespace App1
                     break;
             }
         }
+
+        private void NextPage_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

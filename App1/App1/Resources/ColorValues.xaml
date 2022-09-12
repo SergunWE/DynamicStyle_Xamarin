@@ -8,4 +8,5 @@
     <Color x:Key="lightBackgroundColor">White</Color>
     <Color x:Key="linkTextColor">#0000fe</Color>
     <Color x:Key="buttonBorderColor">Yellow</Color>
+    <Color x:Key="titleBackgroundColor">LightBlue</Color>
 </ResourceDictionary>
